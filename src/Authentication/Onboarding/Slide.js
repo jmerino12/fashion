@@ -9,7 +9,7 @@ interface SlideProps {
   rigth?: Boolean;
 }
 
-const Slide = ({label, rigth}: SlideProps) => {
+const Slide = ({title, rigth}: SlideProps) => {
   const transform = [
     {translateY: (SLIDE_HEIGTH - 100) / 2},
     {translateX: rigth ? width / 2 - 50 : -width / 2 + 50},
@@ -18,7 +18,7 @@ const Slide = ({label, rigth}: SlideProps) => {
   return (
     <View style={styles.container}>
       <View style={[styles.titleContainer, {transform}]}>
-        <Text style={styles.title}>{label} </Text>
+        <Text style={styles.title}>{title} </Text>
       </View>
     </View>
   );
